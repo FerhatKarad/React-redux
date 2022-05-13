@@ -4,7 +4,7 @@ export default function Counter() {
   const [count, setCount] = useState(0);
 
   return (
-    <div> <h1>This Button will be empty if you leave this site </h1>
+    <div> <h4>This Button will be empty if you leave this site </h4>
       <div container mt-5>
         <div className='row'>
           <div className='col-md-5'>
