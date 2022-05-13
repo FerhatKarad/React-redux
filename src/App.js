@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Home from './components/Home'
+import Counter from './components/Counter'
+import UserList from './components/UserList';
+import Employees from './components/Employees';
+import CounterWithRedux from './components/CounterWithRedux';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Navbar />
+    <Routes>
+    <Route path='/' element={<Home />}/>
+    <Route path='/counter' element={<Counter />}/>
+    <Route path='/counter-redux' element={<CounterWithRedux />} />
+    <Route path='/employees' element={<Employees />}/> 
+    <Route path='/userlist' element={<UserList />}/>
+    </Routes>  
+    
+
     </div>
   );
 }
+
 
 export default App;
